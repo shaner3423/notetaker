@@ -50,16 +50,16 @@ app.post('/api/notes', (req, res) => {
     res.json(notesArray);
 });
 
-//delete API - borrowed from Emily https://github.com/EmilyNecciai
-// app.delete('/api/notes/:id', (req, res) => {
-//    const { id } = req.params;
+// delete API 
+app.delete('/api/notes/:id', (req, res) => {
+//    const note = req.params;
 
-//    const deleteNote = outhPath.findIndex(outPath => outPath.id == id);
+//    const deleteNote = note.index(note => note.id == id);
 
 //    notes.splice(deleteNote, 1);
 //    return res.send();
 
-// });
+});
 
 //get notes pages 
 app.get('*', (req, res) => {
