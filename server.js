@@ -38,7 +38,7 @@ app.get('/api/notes', (req, res) => {
 });
 
 
-//post API - this is where Ben's code starts he posted a video on our slack class channel and taught us how to do these codes
+//post API - this is where Ben's code starts he posted a video on our slack class channel and taught us how to do these codes https://github.com/Bgallag5
 app.post('/api/notes', (req, res) => {
     const notesInput = req.body;
     notesInput.id = notesArray.length.toString();
@@ -50,16 +50,16 @@ app.post('/api/notes', (req, res) => {
     res.json(notesArray);
 });
 
-//delete API - this portion of the code is from Emily. She helped me solve the app.delete code https://github.com/EmilyNecciai
-app.delete('/api/notes/:id', (req, res) => {
-   const { id } = req.params;
+//delete API - borrowed from Emily https://github.com/EmilyNecciai
+// app.delete('/api/notes/:id', (req, res) => {
+//    const { id } = req.params;
 
-   const deleteNote = outhPath.findIndex(outPath => outPath.id == id);
+//    const deleteNote = outhPath.findIndex(outPath => outPath.id == id);
 
-   notes.splice(deleteNote, 1);
-   return res.send();
+//    notes.splice(deleteNote, 1);
+//    return res.send();
 
-});
+// });
 
 //get notes pages 
 app.get('*', (req, res) => {
